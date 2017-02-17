@@ -1,5 +1,5 @@
 {
-  "name": "clone-ca",
+  "name": "dolly-the-page",
   "version": "0.1.0",
   "description": "Cloning my homepage made easy.",
   "main": "index.js",
@@ -7,5 +7,22 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Christian Ost",
-  "license": "MIT"
+  "license": "MIT",
+  "bin": {
+    "dolly-the-page": "./index.js"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "inquirer": "^3.0.1",
+    "yamljs": "^0.2.8"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "globals": {
+      "Promise": true
+    }
+  }
 }
