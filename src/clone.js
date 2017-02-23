@@ -4,6 +4,7 @@ const printHelp = require('./print/help');
 const printConfig = require('./print/config');
 const printFinal = require('./print/final');
 const createTemplate = require('./template');
+const resolveSvgs = require('./template/svg').resolveSvgs;
 const file = require('./file');
 
 let defaultConfig = {
@@ -34,7 +35,9 @@ module.exports = function clone(version) {
 
   createConfig(defaultConfig, program.config)
     .then(printConfig)
-    .then(config => file.writeToFile(config.outputFile, createTemplate(config)))
+    .then(resolveSvgs)
+    .then(config =>
+      createTemplate(config).then(homepage => file.writeToFile(config.outputFile, homepage)))
     .then(printFinal.success)
     .catch(error => {
       printFinal.failure();
