@@ -39,6 +39,7 @@ module.exports = function clone(version) {
     .then(config =>
       createTemplate(config).then(homepage => file.writeToFile(config.outputFile, homepage)))
     .then(printFinal.success)
+    .then(process.exit)
     .catch(error => {
       printFinal.failure();
       process.exit(1);
