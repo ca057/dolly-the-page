@@ -2,8 +2,13 @@ const prompt = require('inquirer');
 const YAML = require('yamljs');
 
 const createConfigStructure = defaultConfig => Object.keys(defaultConfig);
-const validateStructure = (correct, toValidate) =>
-  createConfigStructure(correct) === createConfigStructure(toValidate);
+const containsAll = (arr1, arr2) => arr2.every(arr2Item => arr1.includes(arr2Item));
+const validateStructure = (correct, toValidate) => {
+  const correctKeys = createConfigStructure(correct);
+  const toValidateKeys = createConfigStructure(toValidate);
+
+  return containsAll(correctKeys, toValidateKeys) && containsAll(correctKeys, toValidateKeys);
+};
 
 const parseInteractiveLink = link => link.split('|');
 
@@ -26,7 +31,7 @@ const fromFile = (defaultConfig, configFile) => {
   if (configFile && configFile.length) {
     console.log('Reading your config file...\n');
     const configFromFile = YAML.load(configFile);
-    if (validateStructure(defaultConfig, configFromFile)) return Promise.resolve(configFile);
+    if (validateStructure(defaultConfig, configFromFile)) return Promise.resolve(configFromFile);
   }
   return Promise.reject('Either no path defined or wrong structure.');
 };
