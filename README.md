@@ -26,7 +26,7 @@ To run the interactive mode, just run the command:
 
 Currently only `ionicons` are supported. When you get ask for the icon name, use the full name as they are defined on their [homepage](https://ionicons.com/).
 
-Soon you can also define a config-file in the `yml`-format:
+You can also define a config-file in the `yml`-format:
 
     dolly-the-page -c config.yml
 
