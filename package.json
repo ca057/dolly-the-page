@@ -26,6 +26,11 @@
     },
     "globals": {
       "Promise": true
+    },
+    "parserOptions": {
+      "ecmaFeatures": {
+        "experimentalObjectRestSpread": true
+      }
     }
   }
 }

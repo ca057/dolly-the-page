@@ -22,7 +22,7 @@ const fromFile = (defaultConfig, configFile) => {
     'Sorry, reading from config file is currently not supported. The path you specified:',
     configFile
   );
-  return Promise.resolve();
+  return Promise.reject();
 };
 
 const interactively = defaultConfig => {
