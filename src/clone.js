@@ -7,7 +7,7 @@ const createTemplate = require('./template');
 const resolveSvgs = require('./template/svg').resolveSvgs;
 const file = require('./file');
 
-const version = require('./package.json').version;
+const version = require('./../package.json').version;
 const defaultConfig = require('./../defaultConfig.json');
 
 module.exports = function clone(version) {
