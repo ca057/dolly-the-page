@@ -1,4 +1,5 @@
 const prompt = require('inquirer');
+const YAML = require('yamljs');
 
 const parseInteractiveLink = link => link.split('|');
 
@@ -18,11 +19,11 @@ const toLinkObject = linkArray => ({
 });
 
 const fromFile = (defaultConfig, configFile) => {
-  console.log(
-    'Sorry, reading from config file is currently not supported. The path you specified:',
-    configFile
-  );
-  return Promise.reject();
+  console.log('Reading your config file...\n');
+  return configFile && configFile.length
+    ? // TOOD validate it
+      Promise.resolve(Object.assign(defaultConfig, YAML.load(configFile)))
+    : Promise.reject();
 };
 
 const interactively = defaultConfig => {
