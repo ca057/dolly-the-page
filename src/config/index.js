@@ -1,6 +1,10 @@
 const prompt = require('inquirer');
 const YAML = require('yamljs');
 
+const createConfigStructure = defaultConfig => Object.keys(defaultConfig);
+const validateStructure = (correct, toValidate) =>
+  createConfigStructure(correct) === createConfigStructure(toValidate);
+
 const parseInteractiveLink = link => link.split('|');
 
 const promptValidator = {
@@ -19,11 +23,12 @@ const toLinkObject = linkArray => ({
 });
 
 const fromFile = (defaultConfig, configFile) => {
-  console.log('Reading your config file...\n');
-  return configFile && configFile.length
-    ? // TOOD validate it
-      Promise.resolve(Object.assign(defaultConfig, YAML.load(configFile)))
-    : Promise.reject();
+  if (configFile && configFile.length) {
+    console.log('Reading your config file...\n');
+    const configFromFile = YAML.load(configFile);
+    if (validateStructure(defaultConfig, configFromFile)) return Promise.resolve(configFile);
+  }
+  return Promise.reject('Either no path defined or wrong structure.');
 };
 
 const interactively = defaultConfig => {

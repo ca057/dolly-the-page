@@ -7,20 +7,8 @@ const createTemplate = require('./template');
 const resolveSvgs = require('./template/svg').resolveSvgs;
 const file = require('./file');
 
-let defaultConfig = {
-  name: 'Christian Ost',
-  outputFile: 'index.html',
-  backgroundColor: '#FFD54F',
-  fontColor: '#212121',
-  favicon: 'favicon.ico',
-  links: [
-    {
-      name: 'Christian Ost',
-      url: 'https://www.christianost.de',
-      icon: 'ion-heart'
-    }
-  ]
-};
+const version = require('./package.json').version;
+const defaultConfig = require('./../defaultConfig.json');
 
 module.exports = function clone(version) {
   program
