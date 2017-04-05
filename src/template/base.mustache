@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="author" content="{{name}}">
+  <title>{{name}}</title>
+  <style>
+    {{> style}}
+  </style>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <!--
+    * base layout by Christian Ost (www.christianost.de)
+    * this website is created with dolly-the-page (www.christianost.de/dolly-the-page)
+  -->
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>{{name}}</h1>
+    </header>
+    <nav>
+      {{#links}}
+        {{> link}}
+      {{/links}}
+    </nav>
+  </main>
+</body>
+
+</html>

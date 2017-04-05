@@ -1,0 +1,36 @@
+{
+  "name": "dolly-the-page",
+  "version": "0.1.0",
+  "description": "Cloning my homepage made easy.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christian Ost",
+  "license": "MIT",
+  "bin": {
+    "dolly-the-page": "./index.js"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "inquirer": "^3.0.1",
+    "ionicons-npm": "^2.0.1",
+    "mustache": "^2.3.0",
+    "svgo": "^0.7.2",
+    "yamljs": "^0.2.8"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "globals": {
+      "Promise": true
+    },
+    "parserOptions": {
+      "ecmaFeatures": {
+        "experimentalObjectRestSpread": true
+      }
+    }
+  }
+}
