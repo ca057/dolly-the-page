@@ -1,6 +1,15 @@
 module.exports = () => {
   console.log(
     `
+
+  Usage: dolly-the-page [options]
+
+  Options:
+
+    -h, --help                  output usage information
+    -V, --version               output the version number
+    -c, --config <config-file>  A yml-file with the configuration for the homepage clone
+
 Examples:
 
   Create the homepage interactively:

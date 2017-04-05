@@ -27,6 +27,7 @@
     "globals": {
       "Promise": true
     },
+    "parser": "babel-eslint",
     "parserOptions": {
       "ecmaFeatures": {
         "experimentalObjectRestSpread": true
