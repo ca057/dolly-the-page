@@ -37,8 +37,8 @@ The config-file should look something like the following:
 ```yaml
 name:             Christian Ost
 outputFile:       index.html
-backgroundColor:  #FFD54F
-fontColor:        #212121
+backgroundColor:  '#FFD54F'
+fontColor:        '#212121'
 favicon:          favicon.ico
 links:
   - name:         Christian Ost
