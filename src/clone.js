@@ -21,8 +21,6 @@ module.exports = function clone() {
   program.on('--help', printHelp);
   program.parse(process.argv);
 
-  console.log(process.argv.slice(2));
-
   createConfig(defaultConfig, program.config)
     .then(printConfig)
     .then(resolveSvgs)
