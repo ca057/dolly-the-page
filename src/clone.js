@@ -15,7 +15,7 @@ module.exports = function clone() {
     .version(version)
     .option(
       '-c, --config <config-file>',
-      'A yml-file with the configuration for the homepage clone',
+      'A yml-file with the configuration for the homepage clone'
     );
 
   program.on('--help', printHelp);
