@@ -1,3 +1,4 @@
+// @flow
 const program = require('commander');
 const createConfig = require('./config');
 const printHelp = require('./print/help');
