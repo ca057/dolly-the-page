@@ -20,6 +20,10 @@ argparse@^1.0.7:
   dependencies:
     sprintf-js "~1.0.2"
 
+babylon@^6.15.0:
+  version "6.16.1"
+  resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.16.1.tgz#30c5a22f481978a9e7f8cdfdf496b11d94b404d3"
+
 balanced-match@^0.4.1:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-0.4.2.tgz#cb3f3e3c732dc0f01ee70b403f302e61d7709838"
@@ -103,6 +107,17 @@ figures@^2.0.0:
   resolved "https://registry.yarnpkg.com/figures/-/figures-2.0.0.tgz#3ab1a2d2a62c8bfb431a0c94cb797a2fce27c962"
   dependencies:
     escape-string-regexp "^1.0.5"
+
+flow-bin@^0.43.1:
+  version "0.43.1"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.43.1.tgz#0733958b448fb8ad4b1576add7e87c31794c81bc"
+
+flow-remove-types@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/flow-remove-types/-/flow-remove-types-1.2.0.tgz#c285516eabba72177a1b10bfb58f6ffb675a8877"
+  dependencies:
+    babylon "^6.15.0"
+    vlq "^0.2.1"
 
 fs.realpath@^1.0.0:
   version "1.0.0"
@@ -304,6 +319,10 @@ tmp@^0.0.31:
   resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.0.31.tgz#8f38ab9438e17315e5dbd8b3657e8bfb277ae4a7"
   dependencies:
     os-tmpdir "~1.0.1"
+
+vlq@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/vlq/-/vlq-0.2.1.tgz#14439d711891e682535467f8587c5630e4222a6c"
 
 whet.extend@~0.9.9:
   version "0.9.9"

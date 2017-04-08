@@ -1,6 +1,9 @@
 node_modules
 npm-debug.log
 
+# build directory
+build/
+
 .vscode
 
 # test output

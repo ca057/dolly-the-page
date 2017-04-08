@@ -2,8 +2,10 @@
   "name": "dolly-the-page",
   "version": "0.1.0",
   "description": "Cloning my homepage made easy.",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
+    "build": "flow-remove-types src/ -D build/",
+    "prepublish": "yarn run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Christian Ost",
@@ -32,5 +34,9 @@
         "experimentalObjectRestSpread": true
       }
     }
+  },
+  "devDependencies": {
+    "flow-bin": "^0.43.1",
+    "flow-remove-types": "^1.2.0"
   }
 }
