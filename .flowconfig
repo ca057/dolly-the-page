@@ -1,5 +1,5 @@
 [ignore]
-.*/__tests__/.*
+<PROJECT_ROOT>/node_modules/.*
 
 [include]
 
