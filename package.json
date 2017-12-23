@@ -1,6 +1,6 @@
 {
   "name": "dolly-the-page",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Cloning my homepage made easy.",
   "main": "index.js",
   "scripts": {
