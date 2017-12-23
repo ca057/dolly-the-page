@@ -1,11 +1,12 @@
 # Dolly The Page
 
+![NPM](https://img.shields.io/npm/v/dolly-the-page.svg)
+
 > Command-line tool to clone my homepage. :ram:
 
 ![Dolly, the wonderful sheep](https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Hello_Dolly.jpg/640px-Hello_Dolly.jpg "Dolly, the wonderful sheep")
 
 To simplify the process for some of my friends, who cloned my homepage, I created this small tool. Like cloning sheeps, define a name and run the process.
-
 
 ## What's the purpose?
 
@@ -14,7 +15,6 @@ You need a simple homepage for your domain? You want it fast and responsive? You
 What you get is the following: A colorful and nice looking homepage:
 
     // TOOD: ADD SCREENSHOTS HERE
-
 
 ## What do I have to do?
 
