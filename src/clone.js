@@ -3,14 +3,14 @@ const createConfig = require('./config');
 const printHelp = require('./print/help');
 const printConfig = require('./print/config');
 const printFinal = require('./print/final');
-const createTemplate = require('./template');
-const resolveSvgs = require('./template/svg').resolveSvgs;
+const getCreateTemplate = require('./template');
+const getResolveSvgs = require('./template/svg').getResolveSvgs;
 const file = require('./file');
 
 const version = require('./../package.json').version;
 const defaultConfig = require('./../defaultConfig.json');
 
-module.exports = function clone() {
+module.exports = function clone(basePath) {
   program
     .version(version)
     .option(
@@ -23,12 +23,14 @@ module.exports = function clone() {
 
   createConfig(defaultConfig, program.config)
     .then(printConfig)
-    .then(resolveSvgs)
+    .then(getResolveSvgs(basePath))
     .then(config =>
-      createTemplate(config).then(homepage => file.writeToFile(config.outputFile, homepage)))
+      getCreateTemplate(basePath)(config).then(homepage =>
+        file.writeToFile(config.outputFile, homepage)
+      )
+    )
     .then(printFinal.success)
     .then(process.exit)
-    .then(console.log, console.log)
     .catch(error => {
       printFinal.failure();
       process.exit(1);

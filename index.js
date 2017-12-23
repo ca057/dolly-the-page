@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 const clone = require('./src/clone');
 
-clone();
+clone(__dirname);
